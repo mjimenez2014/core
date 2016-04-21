@@ -1,0 +1,33 @@
+%h2 Libros 
+= simple_form_for(libros_path, :url => "index" ,:method => :get ) do |f|
+  = f.input :search, label: false, placeholder: "Empresa Tipo Fecha(yyyy-mm) ", :input_html => {:style=> 'width: 300px'}  
+  %p
+  = f.button :submit, "Buscar",  class: "btn btn-primary btn-xs"
+
+%br
+
+%table.table.table-striped
+  %tr
+    %th Rut
+    %th Empresa
+    %th Id Envio
+    %th Fecha
+    %th Tipo
+    %th Estado
+    %th Enviado a SII
+    %th
+    %th
+    %th
+  - @libros.each do |libro|
+    %tr
+      %td= libro.rut
+      %td= libro.empresa
+      %td= libro.idenvio
+      %td= libro.fecha
+      %td= libro.tipo
+      %td= libro.estado
+      %td= libro.enviado
+      %td= link_to 'Ver Detalle', "/detlibro/index/#{libro.id}", class: "btn btn-primary btn-xs"
+      %td= link_to "Generar", "/listalibro/genxml/#{libro.id}", class: "btn btn-primary btn-xs"
+      %td= link_to "XML", "/listalibro/sendxml/#{libro.id}", class: "btn btn-primary btn-xs"
+      %td= link_to "Enviar", "/listalibro/sendsii/#{libro.id}", class: "btn btn-primary btn-xs"

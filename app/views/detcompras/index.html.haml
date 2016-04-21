@@ -1,0 +1,102 @@
+%h3 Detalle Documento
+
+=link_to "Volver", session[:return_to] = request.referer, class: 'btn btn-success btn-sm'
+%br
+%br
+%h4 Productos
+%table.table.table-striped
+  %thead
+    %tr
+      %th Item
+      %th Código
+      %th Glosa
+      %th Dscitem
+      %th Cantidad
+      %th Unmditem
+      %th Prcitem
+      %th Descuentopct
+      %th Descuentomonto
+      %th Montoitem   
+  %tbody
+    - @detcompras.each do |detcompra|
+      %tr
+        %td= detcompra.NroLinDet
+        %td= detcompra.VlrCodigo
+        %td= detcompra.NmbItem.force_encoding('utf-8')
+        %td= detcompra.DscItem
+        %td= detcompra.QtyItem
+        %td= detcompra.UnmdItem
+        %td= number_to_currency( detcompra.PrcItem, precision: 0, delimiter: "." )
+        %td= detcompra.DescuentoPct
+        %td= number_to_currency( detcompra.DescuentoMonto, precision: 0, delimiter: "." )
+        %td= number_to_currency( detcompra.MontoItem, precision: 0, delimiter: "." )
+- unless @dscGlobal[0].NroLinDR.nil?
+  %br
+  %h4 Descuento Global
+  %table.table.table-striped
+    %thead
+      %tr
+        %th NroLinDR
+        %th TpoMov
+        %th GlosaDR
+        %th TpoValor
+        %th ValorDR
+        %th IndExeDR
+    %tbody
+      - @dscGlobal.each do |dscto|
+        %tr
+          %td= dscto.NroLinDR
+          %td= dscto.TpoMov
+          - if dscto.GlosaDR.nil?
+            %td
+          - else  
+            %td= dscto.GlosaDR.force_encoding('utf-8')
+          %td= dscto.TpoValor
+          %td= dscto.ValorDR
+          %td= dscto.IndExeDR
+- unless @refdet[0].NroLinRef.nil?
+  %br
+  %h4 Referencia
+  %table.table.table-striped
+    %thead
+      %tr
+        %th NroLinRef
+        %th TpoDocRef
+        %th IndGlobal
+        %th FolioRef
+        %th RUTOtr
+        %th IdAdicOtr
+        %th FchRef
+        %th CodRef
+        %th RazonRef
+    %tbody
+      - @refdet.each do |referencia|
+        %tr
+          %td= referencia.NroLinRef
+          %td= referencia.TpoDocRef
+          %td= referencia.IndGlobal
+          %td= referencia.FolioRef.force_encoding('utf-8')
+          %td= referencia.RUTOtr
+          %td= referencia.IdAdicOtr
+          %td= referencia.FchRef
+          %td= referencia.CodRef
+          - if referencia.RazonRef.nil?
+            %td
+          - else
+            %td= referencia.RazonRef.force_encoding('utf-8')
+- unless @imptos[0].TipoImp.nil?
+  %br
+  %h4 Impuesto Retenido
+  %table.table.table-striped
+    %thead
+      %tr
+        %th TipoImp
+        %th TasaImp
+        %th MontoImp            
+    %tbody
+      - @imptos.each do |impto|
+        %tr    
+          %td= impto.TipoImp
+          %td= impto.TasaImp
+          %td= impto.MontoImp  
+

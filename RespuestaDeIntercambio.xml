@@ -1,0 +1,39 @@
+<RespuestaDTE xmlns="http://www.sii.cl/SiiDte" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte RespuestaEnvioDTE_v10.xsd">
+	<Resultado ID="RecepcionEnvio">
+		<Caratula version="1.0">
+			<RutResponde>77888630-8</RutResponde>
+			<RutRecibe>88888888-8</RutRecibe>
+			<IdRespuesta>1</IdRespuesta>
+			<NroDetalles>2</NroDetalles>
+			<TmstFirmaResp>2014-11-28T10:45:00</TmstFirmaResp>
+		</Caratula>
+		<RecepcionEnvio>
+			<NmbEnvio>ENVIO_DTE_339734.xml</NmbEnvio>
+			<FchRecep>2014-11-26T10:30:00</FchRecep>
+			<CodEnvio>1</CodEnvio>
+			<EnvioDTEID>SetDoc</EnvioDTEID>
+			<EstadoRecepEnv>0</EstadoRecepEnv>
+			<RecepEnvGlosa>Envio REcibido Conforme</RecepEnvGlosa>
+			<NroDTE>2</NroDTE>
+			<RecepcionDTE>
+				<TipoDTE>33</TipoDTE>
+				<Folio>52687</Folio>
+				<FchEmis>2014-11-26</FchEmis>
+				<RUTEmisor>88888888-8</RUTEmisor>
+				<RUTRecep>77888630-8</RUTRecep>
+				<MntTotal>22682</MntTotal>
+				<EstadoRecepDTE>0</EstadoRecepDTE>
+				<RecepDTEGlosa>DTE Aceptado OK</RecepDTEGlosa>	
+			</RecepcionDTE>
+                        <RecepcionDTE>
+                                <TipoDTE>33</TipoDTE>  
+                                <Folio>52688</Folio>
+                                <FchEmis>2013-06-21</FchEmis>
+                                <RUTEmisor>88888888-8</RUTEmisor>
+                                <RUTRecep>69507000-4</RUTRecep>
+                                <MntTotal>31012</MntTotal>
+                                <EstadoRecepDTE>3</EstadoRecepDTE>
+                                <RecepDTEGlosa>DTE No Recibido - Error RUT Receptor</RecepDTEGlosa>
+                        </RecepcionDTE>
+		</RecepcionEnvio>
+	</Resultado>

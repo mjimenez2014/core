@@ -1,0 +1,25 @@
+%h1 Listing sucursals
+
+%table
+  %thead
+    %tr
+      %th Nombre
+      %th Cdgsiisucur
+      %th Empresa
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @sucursals.each do |sucursal|
+      %tr
+        %td= sucursal.nombre
+        %td= sucursal.cdgsiisucur
+        %td= sucursal.empresa
+        %td= link_to 'Show', sucursal
+        %td= link_to 'Edit', edit_sucursal_path(sucursal)
+        %td= link_to 'Destroy', sucursal, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Sucursal', new_sucursal_path

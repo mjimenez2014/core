@@ -1,0 +1,32 @@
+%h1 Contribuyentes
+%br
+%br
+= link_to 'uploads Contribuyente', '/contribuyentes/upload', class: "btn btn-primary btn-xs"
+%br
+%br
+
+%p Contribuyentes Registrados :
+%h3= @contribuyentes
+/ %br
+/ %table
+/   %thead
+/     %tr
+/       %th Rut
+/       %th Nombre
+/       %th Email
+/       %th
+/       %th
+/       %th
+      
+/   %tbody
+/     - @contribuyentes.each do |contribuyente|
+/       %tr
+/         %td= contribuyente.rut
+/         %td= contribuyente.nombre
+/         %td= contribuyente.email
+/         %td= link_to 'Show', contribuyente
+/         %td= link_to 'Edit', edit_contribuyente_path(contribuyente)
+/         %td= link_to 'Destroy', contribuyente, :method => :delete, :data => { :confirm => 'Are you sure?' }
+/ %br
+
+

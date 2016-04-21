@@ -1,0 +1,15 @@
+= simple_form_for(@iat) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nombre
+    = f.input :sucursal
+    = f.input :ultimo_ping
+    = f.input :auth_token
+    = f.input :ping_inicio
+    = f.input :espacio_disco
+    = f.input :memoria
+    = f.association :user
+
+  .form-actions
+    = f.button :submit

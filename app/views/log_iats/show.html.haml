@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Sucursal:
+  = @log_iat.sucursal
+%p
+  %b Rut:
+  = @log_iat.rut
+%p
+  %b Ultimo ping:
+  = @log_iat.ultimo_ping
+%p
+  %b Tipo dte:
+  = @log_iat.tipo_dte
+%p
+  %b Ultimo folio:
+  = @log_iat.ultimo_folio
+
+= link_to 'Edit', edit_log_iat_path(@log_iat)
+\|
+= link_to 'Back', log_iats_path

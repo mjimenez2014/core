@@ -1,0 +1,23 @@
+%h1 Listing usuarioempresas
+
+%table
+  %thead
+    %tr
+      %th Rutempresa
+      %th Useremail
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @usuarioempresas.each do |usuarioempresa|
+      %tr
+        %td= usuarioempresa.rutempresa
+        %td= usuarioempresa.useremail
+        %td= link_to 'Show', usuarioempresa
+        %td= link_to 'Edit', edit_usuarioempresa_path(usuarioempresa)
+        %td= link_to 'Destroy', usuarioempresa, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Usuarioempresa', new_usuarioempresa_path

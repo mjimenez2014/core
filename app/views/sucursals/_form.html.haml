@@ -1,0 +1,10 @@
+= simple_form_for(@sucursal) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :nombre
+    = f.input :cdgsiisucur
+    = f.association :empresa
+
+  .form-actions
+    = f.button :submit

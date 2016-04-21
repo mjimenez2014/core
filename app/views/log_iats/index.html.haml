@@ -1,0 +1,24 @@
+%h1 Iat
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Cod Sucursal
+      %th Sucursal
+      %th Rut
+      %th Empresa
+      %th Ultimo ping
+      %th Tipo dte
+      %th Ultimo folio
+      
+  %tbody
+    - @log_iats.each do |log_iat|
+      %tr
+        %td= log_iat.sucursal
+        %td= log_iat.nomsucursal
+        %td= log_iat.rut
+        %td= log_iat.empresa
+        %td= log_iat.ultimoping.localtime
+        %td= log_iat.tipo_dte
+        %td= log_iat.ultimo_folio
+%br

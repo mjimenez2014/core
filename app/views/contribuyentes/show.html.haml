@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Rut:
+  = @contribuyente.rut
+%p
+  %b Nombre:
+  = @contribuyente.nombre
+%p
+  %b Email:
+  = @contribuyente.email
+
+= link_to 'Edit', edit_contribuyente_path(@contribuyente)
+\|
+= link_to 'Back', contribuyentes_path

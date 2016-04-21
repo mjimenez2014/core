@@ -1,0 +1,31 @@
+%h1 Listing dsc_rcg_globals
+
+%table
+  %tr
+    %th Nrolindr
+    %th Tpomov
+    %th Glosadr
+    %th Tpovalor
+    %th Valordr
+    %th Indexedr
+    %th Documento
+    %th
+    %th
+    %th
+
+  - @dsc_rcg_globals.each do |dsc_rcg_global|
+    %tr
+      %td= dsc_rcg_global.NroLinDR
+      %td= dsc_rcg_global.TpoMov
+      %td= dsc_rcg_global.GlosaDR
+      %td= dsc_rcg_global.TpoValor
+      %td= dsc_rcg_global.ValorDR
+      %td= dsc_rcg_global.IndExeDR
+      %td= dsc_rcg_global.documento
+      %td= link_to 'Show', dsc_rcg_global
+      %td= link_to 'Edit', edit_dsc_rcg_global_path(dsc_rcg_global)
+      %td= link_to 'Destroy', dsc_rcg_global, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Dsc rcg global', new_dsc_rcg_global_path

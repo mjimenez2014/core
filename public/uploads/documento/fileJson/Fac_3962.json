@@ -1,0 +1,66 @@
+{
+  "TipoDTE": 33,
+  "Folio": 3962,
+  "FchEmis": "2015-03-20",
+  "IndNoRebaja": 0,
+  "TipoDespacho": 0,
+  "IndTraslado": 0,
+  "TpoImpresion": "",
+  "IndServicio": 0,
+  "MntBruto": 0,
+  "FmaPago": 0,
+    "MntPagos:":
+    [
+    {"FchPago": "","MntPago": 0}
+    ],
+  "FchVenc": "",
+  "RUTMandante": "",
+  "RUTRecep": "16629969-1",
+  "RznSocRecep": "JORDAN MUNOZ HERNANDEZ",
+  "GiroRecep": "PANADERIA Y ABARROTES",
+  "DirRecep": "GRAN AVENIDA 8153",
+  "CmnaRecep": "SANTIAGO",
+  "CiudadRecep": "ACHAO",
+  "RUTSolicita": "",
+  "RUTTrans": "",
+  "NombreChofer": "",
+  "DirDest": "",
+  "CmnaDest": "",
+  "MntNeto":15649,
+  "MntExe": 0,
+  "MntBase": 0,
+  "MntMargenCom": 0,
+  "TasaIVA": 19,
+  "IVA": 2973,
+    "imptoReten":
+    [
+    {"TipoImp": "271", "TasaImp": 18, "MontoImp": 2001}
+    ],
+  "IVANoRet": 0,
+  "CredEC": 0,
+  "GrntDep": 0,
+  "ValComNeto": 0,
+  "ValComExe": 0,
+  "ValComIVA": 0,
+  "MntTotal": 20623,
+  "MontoNF": 0,
+    "detalle":
+    [
+      { "NroLinDet": 1, "TpoCodigo": "PLU", "VlrCodigo": 2388, "TpoDocLiq": " ", "IndExe": 0, "NmbItem": "AGUA MINERAL ANDINA C/G VITAL BT 600CC", "UnmdItem": "C/U", "QtyItem": 12, "PrcItem": 197.479, "DescuentoPct": 0, "DescuentoMonto": 0, "CodImpAdic": 0, "MontoItem": 2370},
+      { "NroLinDet": 2, "TpoCodigo": "PLU", "VlrCodigo": 14669, "TpoDocLiq": " ", "IndExe": 0, "NmbItem": "AGUA MINERAL VITAL 1.600 CC", "UnmdItem": "C/U", "QtyItem": 6, "PrcItem": 360.5042, "DescuentoPct": 0, "DescuentoMonto": 0, "CodImpAdic": 0, "MontoItem": 2163},
+      { "NroLinDet": 3, "TpoCodigo": "PLU", "VlrCodigo": 11364, "TpoDocLiq": " ", "IndExe": 0, "NmbItem": "BEB ANDINA COCA COLA BT 580CC", "UnmdItem": "C/U", "QtyItem": 18, "PrcItem": 350.365, "DescuentoPct": 0, "DescuentoMonto": 0, "CodImpAdic": 271, "MontoItem": 6307},
+      { "NroLinDet": 4, "TpoCodigo": "PLU", "VlrCodigo": 2616, "TpoDocLiq": " ", "IndExe": 0, "NmbItem": "BEB ANDINA COCA COLA LT 350CC", "UnmdItem": "C/U", "QtyItem": 18, "PrcItem": 267.1533, "DescuentoPct": 0, "DescuentoMonto": 0, "CodImpAdic": 271, "MontoItem": 4809}
+    ],
+    "dscRcgGlobal":
+    [
+      {"NroLinDR": 0, "TpoMov": "",   "GlosaDR": "", "TpoValor": "", "ValorDR": 0," IndExeDR": 0}
+    ],
+    "Referencia":
+    [
+      {"NroLinRef": 0, "TpoDocRef": "SET", "IndGlobal": 0, "FolioRef": "",  "RUTOtr": "", "IdAdicOtr": "", "FchRef": "", "CodRef": 0, "RazonRef": "CASO  311171-1"}
+    ],
+    "Comisiones":
+    [
+      { "NroLinCom": 0, "TipoMovim": "", "Glosa": "", "ValComNeto": 0, "ValComExe": 0, "ValComIVA": 0 }
+    ]
+}

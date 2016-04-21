@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @sucursal.nombre
+%p
+  %b Cdgsiisucur:
+  = @sucursal.cdgsiisucur
+%p
+  %b Empresa:
+  = @sucursal.empresa
+
+= link_to 'Edit', edit_sucursal_path(@sucursal)
+\|
+= link_to 'Back', sucursals_path

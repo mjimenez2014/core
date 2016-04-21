@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Rutempresa:
+  = @usuarioempresa.rutempresa
+%p
+  %b Useremail:
+  = @usuarioempresa.useremail
+
+= link_to 'Edit', edit_usuarioempresa_path(@usuarioempresa)
+\|
+= link_to 'Back', usuarioempresas_path

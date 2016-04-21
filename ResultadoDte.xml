@@ -1,0 +1,21 @@
+<RespuestaDTE xmlns="http://www.sii.cl/SiiDte" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte RespuestaEnvioDTE_v10.xsd">
+	<Resultado ID="ResultadoDTE">
+		<Caratula version="1.0">
+			<RutResponde>77888630-8</RutResponde>
+			<RutRecibe>88888888-8</RutRecibe>
+			<IdRespuesta>1</IdRespuesta>
+			<NroDetalles>2</NroDetalles>
+			<TmstFirmaResp>2014-11-27T00:00:00</TmstFirmaResp>
+		</Caratula>
+		<ResultadoDTE>
+			<TipoDTE>33</TipoDTE>
+			<Folio>52687</Folio>
+			<FchEmis>2014-11-26</FchEmis>
+			<RUTEmisor>88888888-8</RUTEmisor>
+			<RUTRecep>77888630-8</RUTRecep>
+			<MntTotal>22682</MntTotal>
+			<CodEnvio>339734</CodEnvio>
+			<EstadoDTE>0</EstadoDTE>
+			<EstadoDTEGlosa>DTE Aceptado OK</EstadoDTEGlosa>
+		</ResultadoDTE>
+	</Resultado>

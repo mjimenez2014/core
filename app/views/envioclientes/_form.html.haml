@@ -1,0 +1,11 @@
+= simple_form_for(@enviocliente) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :folio
+    = f.input :tipo
+    = f.input :rut
+    = f.input :rznsoc
+
+  .form-actions
+    = f.button :submit

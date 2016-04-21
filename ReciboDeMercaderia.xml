@@ -1,0 +1,7 @@
+<EnvioRecibos xmlns="http://www.sii.cl/SiiDte" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte EnvioRecibos_v10.xsd">
+	<SetRecibos ID="Recibo">
+		<Caratula version="1.0">
+			<RutResponde>77888630-8</RutResponde>
+			<RutRecibe>88888888-8</RutRecibe>
+			<TmstFirmaEnv>2014-11-27T11:00:00</TmstFirmaEnv>
+		</Caratula>

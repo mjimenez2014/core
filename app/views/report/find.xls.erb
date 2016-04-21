@@ -1,0 +1,39 @@
+<table border="0">
+  <tr>
+    <th>Folio</th>
+    <th>TipoDTE</th>
+    <th>FchEmis</th>
+    <th>RUTEmisor</th>
+
+    <th>RUTRecep</th>
+    <th>RznSocRecep</th>
+    <th>DirRecep</th>
+    <th>CmnaRecep</th>
+
+    <th>MntNeto</th>
+    <th>MntExe</th>
+    <th>IVA</th>
+    <th>MntTotal</th>
+
+    <th>Estado</th>
+  </tr>
+  <% @documentos.each do |documento| %>
+  <tr>
+    <td><%= documento.Folio %></td>
+    <td><%= documento.TipoDTE %></td>
+    <td><%= documento.FchEmis %></td>
+    <td><%= documento.RUTEmisor %></td>
+    
+    <td><%= documento.RUTRecep %></td>
+    <td><%= documento.RznSocRecep %></td>
+    <td><%= documento.DirRecep %></td>
+    <td><%= documento.CmnaRecep %></td>
+
+    <td><%= documento.MntNeto %></td>
+    <td><%= documento.MntExe %></td>
+    <td><%= documento.IVA %></td>
+    <td><%= documento.MntTotal %></td>
+    <td><%= documento.estado %></td>
+  </tr>
+  <% end %>
+</table>

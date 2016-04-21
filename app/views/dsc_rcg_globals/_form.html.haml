@@ -1,0 +1,14 @@
+= simple_form_for(@dsc_rcg_global) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :NroLinDR
+    = f.input :TpoMov
+    = f.input :GlosaDR
+    = f.input :TpoValor
+    = f.input :ValorDR
+    = f.input :IndExeDR
+    = f.association :documento
+
+  .form-actions
+    = f.button :submit

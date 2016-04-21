@@ -1,0 +1,17 @@
+%h3 Permisos de Administrador
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Email
+      %th Administrador
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.email
+        %td= user.isadmin?
+        - if user.isadmin?
+          %td= link_to 'Quitar Permisos', "/daradmin/quitaradmin/#{user.id}"
+        - else
+          %td= link_to 'Dar Permisos', "/daradmin/#{user.id}"
+%br

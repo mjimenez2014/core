@@ -1,0 +1,9 @@
+= simple_form_for(@usuarioempresa) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :rutempresa
+    = f.input :useremail
+
+  .form-actions
+    = f.button :submit

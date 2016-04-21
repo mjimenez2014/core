@@ -1,0 +1,16 @@
+%h2 Crear Usuario
+
+%h5 Password: minimo 8 caracteres.
+%br
+%br
+
+= form_tag "/newuser/new", multipart: false do 
+  = label_tag :email, 'Email:'
+  = email_field_tag :email, 'email@example.com', class: 'special_input', disabled: false
+  = label_tag :password, 'Password:'
+  = password_field_tag :password
+  = label_tag :password_confirmation, 'Confirmar Password'
+  = password_field_tag :password_confirmation
+  = submit_tag "Crear" 
+%br
+%br

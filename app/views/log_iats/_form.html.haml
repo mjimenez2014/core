@@ -1,0 +1,12 @@
+= simple_form_for(@log_iat) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :sucursal
+    = f.input :rut
+    = f.input :ultimo_ping
+    = f.input :tipo_dte
+    = f.input :ultimo_folio
+
+  .form-actions
+    = f.button :submit

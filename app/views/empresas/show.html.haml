@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Rznsocial:
+  = @empresa.rznsocial
+%p
+  %b Rut:
+  = @empresa.rut
+
+= link_to 'Edit', edit_empresa_path(@empresa)
+\|
+= link_to 'Back', empresas_path

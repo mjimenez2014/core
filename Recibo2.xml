@@ -1,0 +1,13 @@
+		<Recibo version="1.0">
+			<DocumentoRecibo ID="T35">
+				<TipoDoc>33</TipoDoc>
+				<Folio>52688</Folio>
+				<FchEmis>2013-06-21</FchEmis>
+				<RUTEmisor>88888888-8</RUTEmisor>
+				<RUTRecep>69507000-4</RUTRecep>
+				<MntTotal>31012</MntTotal>
+				<Recinto>Bodega Central</Recinto>
+				<RutFirma>12891016-6</RutFirma>
+				<Declaracion>El acuse de recibo que se declara en este acto, de acuerdo a lo dispuesto en la letra b) del Art. 4, y la letra c) del Art. 5 de la Ley 19.983, acredita que la entrega de mercaderias o servicio(s) prestado(s) ha(n) sido recibido(s).</Declaracion>
+				<TmstFirmaRecibo>2014-11-27T11:25:00</TmstFirmaRecibo>
+			</DocumentoRecibo>

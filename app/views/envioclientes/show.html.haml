@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Folio:
+  = @enviocliente.folio
+%p
+  %b Tipo:
+  = @enviocliente.tipo
+%p
+  %b Rut:
+  = @enviocliente.rut
+%p
+  %b Rznsoc:
+  = @enviocliente.rznsoc
+
+= link_to 'Edit', edit_enviocliente_path(@enviocliente)
+\|
+= link_to 'Back', envioclientes_path

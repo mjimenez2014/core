@@ -1,0 +1,1 @@
+json.extract! @compmanual, :id, :tipodoc, :folio, :fchemis, :rutemisor, :rutrecep, :rznsoemisor, :mntneto, :mntexe, :mntiva, :otrosimpto, :mnttotal, :impto18, :impto10, :impto25, :impto30, :estado, :created_at, :updated_at

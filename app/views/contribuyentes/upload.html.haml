@@ -1,0 +1,7 @@
+%h3 Subir Contribuyentes
+
+= form_tag import_contribuyentes_path, multipart: true do  
+  = label_tag :file, 'Archivo de Contribuyentes CSV:'
+  = file_field_tag :file 
+  %br
+  = submit_tag "Importar"

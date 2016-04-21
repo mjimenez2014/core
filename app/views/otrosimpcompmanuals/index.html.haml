@@ -1,0 +1,27 @@
+%h1 Listing otrosimpcompmanuals
+
+%table
+  %thead
+    %tr
+      %th Tipoimp
+      %th Tasaimp
+      %th Montoimp
+      %th Compmanual
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @otrosimpcompmanuals.each do |otrosimpcompmanual|
+      %tr
+        %td= otrosimpcompmanual.TipoImp
+        %td= otrosimpcompmanual.TasaImp
+        %td= otrosimpcompmanual.MontoImp
+        %td= otrosimpcompmanual.compmanual
+        %td= link_to 'Show', otrosimpcompmanual
+        %td= link_to 'Edit', edit_otrosimpcompmanual_path(otrosimpcompmanual)
+        %td= link_to 'Destroy', otrosimpcompmanual, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Otrosimpcompmanual', new_otrosimpcompmanual_path

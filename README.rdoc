@@ -1,0 +1,16 @@
+== Database dump, from production
+From the terminal:
+* sudo su postgres
+* Password: lubba10580
+* pg_dump dtebridge_production -h localhost -U dtebridge -W > ~/dtebridge_production.dump
+* Password: lubba10580
+
+== Create database for development
+* psql -h localhost
+* create role dtebridge with password 'lubba10580';
+* create database dtebridge_development with owner=dtebridge encoding='utf8';
+* grant all privileges on database dtebridge_development to dtebridge;
+* alter role dtebridge LOGIN;
+
+== Populate database for development, from production dump
+* psql -h localhost -f dtebridge_production.dump -U dtebridge dtebridge_development

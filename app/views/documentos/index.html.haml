@@ -1,0 +1,58 @@
+%h3 Documentos
+.container-fluid
+  .row
+    .col-md-12
+      = simple_form_for(documentos_path,:method => :get ) do |f|
+        .form-group  
+          .col-sm-2
+            = f.input :sucursal, label: false,  collection: Documento.sucursal_options_for_select(current_user.email), :input_html => {:style=> 'width: 180px'}
+          .col-sm-2   
+            = f.input :tipodte, label: false, collection:  Documento.tipodte_option_for_select,:input_html => {:style=> 'width: 150px'} 
+          .col-sm-2  
+            = f.input :folio, label: false, placeholder: "Folio", :input_html => {:style=> 'width: 150px'} 
+          .col-sm-2 
+            = f.input :fecha, label: false, placeholder: "Fchemis(yyyy-mm)", :input_html => {:style=> 'width: 150px'} 
+          .col-sm-2  
+            = f.button :submit, "Buscar",  class: "btn btn-primary btn-xs"
+
+      = link_to "Limpiar Busqueda","/documentos",  class: 'btn btn-info btn-xs'
+%br
+= will_paginate @documentos
+%br
+
+%table.table.table-striped
+  %tr
+    %th Tipodte
+    %th Folio
+    %th Fchemis
+    %th.hidden_sm Cdgsiisucur
+    %th.hidden_sm Mntneto
+    %th Mnttotal
+    %th EstadoEnvio
+    %th Cedible
+    %th Tributable
+    %th XML
+  - @documentos.each do |documento|
+    %tr
+      %td= documento.nombre_doc
+      %td= documento.Folio
+      %td= documento.FchEmis
+      %td= documento.sucursal
+      %td= documento.MntNeto
+      %td= documento.MntTotal
+      %td= documento.estado
+      -if(documento.pdfs?)
+        %td= link_to 'PDF', documento.pdfs_url
+      -else
+        %td
+      -if(documento.pdft?)
+        %td= link_to 'PDF', documento.pdft_url
+      -else
+        %td
+      -if(documento.fileCliente?)
+        %td= link_to 'XML', documento.fileCliente_url
+      -else
+        %td   
+
+%br
+

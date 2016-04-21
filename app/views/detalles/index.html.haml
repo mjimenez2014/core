@@ -1,0 +1,65 @@
+%h1 Listing detalles
+
+%table
+  %tr
+    %th Nrolindet
+    %th Tpocodigo
+    %th Vlrcodigo
+    %th Tpodocliq
+    %th Indexe
+    %th Indagente
+    %th Mntbasefaena
+    %th Mntmargcomer
+    %th Prcconsfinal
+    %th Nmbitem
+    %th Dscitem
+    %th Qtyref
+    %th Unmdref
+    %th Prcref
+    %th Qtyitem
+    %th Fchelabor
+    %th Fchvencim
+    %th Unmditem
+    %th Prcitem
+    %th Descuentopct
+    %th Descuentomonto
+    %th Codimpadic
+    %th Montoitem
+    %th Documento
+    %th
+    %th
+    %th
+
+  - @detalles.each do |detalle|
+    %tr
+      %td= detalle.NroLinDet
+      %td= detalle.TpoCodigo
+      %td= detalle.VlrCodigo
+      %td= detalle.TpoDocLiq
+      %td= detalle.IndExe
+      %td= detalle.IndAgente
+      %td= detalle.MntBaseFaena
+      %td= detalle.MntMargComer
+      %td= detalle.PrcConsFinal
+      %td= detalle.NmbItem
+      %td= detalle.DscItem
+      %td= detalle.QtyRef
+      %td= detalle.UnmdRef
+      %td= detalle.PrcRef
+      %td= detalle.QtyItem
+      %td= detalle.FchElabor
+      %td= detalle.FchVencim
+      %td= detalle.UnmdItem
+      %td= detalle.PrcItem
+      %td= detalle.DescuentoPct
+      %td= detalle.DescuentoMonto
+      %td= detalle.CodImpAdic
+      %td= detalle.MontoItem
+      %td= detalle.documento
+      %td= link_to 'Show', detalle
+      %td= link_to 'Edit', edit_detalle_path(detalle)
+      %td= link_to 'Destroy', detalle, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Detalle', new_detalle_path

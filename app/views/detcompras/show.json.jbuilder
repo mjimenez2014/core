@@ -1,0 +1,1 @@
+json.extract! @detcompra, :id, :NroLinDet, :TpoCodigo, :VlrCodigo, :TpoDocLiq, :IndExe, :IndAgente, :MntBaseFaena, :MntMargComer, :PrcConsFinal, :NmbItem, :DscItem, :QtyRef, :UnmdRef, :PrcRef, :QtyItem, :FchElabor, :FchVencim, :UnmdItem, :PrcItem, :DescuentoPct, :DescuentoMonto, :CodImpAdic, :MontoItem, :doccompra_id, :created_at, :updated_at

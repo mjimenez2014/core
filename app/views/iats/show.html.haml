@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @iat.nombre
+%p
+  %b Sucursal:
+  = @iat.sucursal
+%p
+  %b Ultimo ping:
+  = @iat.ultimo_ping
+%p
+  %b Auth token:
+  = @iat.auth_token
+%p
+  %b Ping inicio:
+  = @iat.ping_inicio
+%p
+  %b Espacio disco:
+  = @iat.espacio_disco
+%p
+  %b Memoria:
+  = @iat.memoria
+%p
+  %b User:
+  = @iat.user
+
+= link_to 'Edit', edit_iat_path(@iat)
+\|
+= link_to 'Back', iats_path

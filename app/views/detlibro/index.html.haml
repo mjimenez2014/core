@@ -1,0 +1,44 @@
+%h3 Detalle Libro
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Tipodoc
+      %th Folio
+      %th RutReceptor
+      / %th Rznsocrecep
+      %th{:style => 'text-align: right;'} Mntneto
+      %th{:style => 'text-align: right;'} Mntexe
+      %th{:style => 'text-align: right;'} Mntiva
+      %th{:style => 'text-align: right;'} Otrosimpto
+      %th{:style => 'text-align: right;'} Mnttotal
+      
+  %tbody
+    - @detalles.each do |detalle|
+      %tr
+        %td= detalle.nombre_doc
+        %td= detalle.folio
+        %td= detalle.rutrecep
+        / %td= detalle.rznsocrecep
+        %td{:style => 'text-align: right;'}= number_to_currency(detalle.mntneto, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+        %td{:style => 'text-align: right;'}= number_to_currency(detalle.mntexe, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+        %td{:style => 'text-align: right;'}= number_to_currency(detalle.mntiva, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+        %td{:style => 'text-align: right;'}= number_to_currency(detalle.otrosimpto, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+        %td{:style => 'text-align: right;'}= number_to_currency(detalle.mnttotal, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+  %tr
+/     %th
+/     %th
+/     %th
+/     %th
+/     %th
+/     %th{:style => 'text-align: right;'}= 'TOTALES'
+/     / %td{:style => 'text-align: right;'}= @totFmanual.count
+/     %td{:style => 'text-align: right;'}= number_to_currency(@mntneto, precision: 0, delimiter: "." )+"&nbsp;".html_safe 
+/     %td{:style => 'text-align: right;'}= number_to_currency(@mntexe, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+/     %td{:style => 'text-align: right;'}= number_to_currency(@iva precision: 0, delimiter: "." )+"&nbsp;".html_safe
+/     %td{:style => 'text-align: right;'}= number_to_currency(@otrosimp, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+/     %td{:style => 'text-align: right;'}= number_to_currency(@mnttotal, precision: 0, delimiter: "." )+"&nbsp;".html_safe 
+/ %br
+
+
+

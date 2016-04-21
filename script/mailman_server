@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require "rubygems"
+require "bundler/setup"
+require "mailman"
+
+Mailman.config.logger = Logger.new('mailman_server.log')
+
+Mailman.config.pop3 = {
+  server: 'pop.gmail.com', port: 995, ssl: true,
+  username: 'dtelubba@gmail.com',
+  password: 'lubba10580'
+ }
+
+
+Mailman::Application.run do
+  default do
+    begin
+      filename = message.attachments[0].filename
+
+      unless filename.nil?
+        extencion = filename[filename.index('.')..filename.index('.')+4]
+
+        if extencion == ".xml"
+          d = Docsemail.new
+          d.xmlrecibido = message.attachments[0].body.decoded
+          d.estado = "RECIBIDO"
+          d.save
+        end 
+      end 
+    rescue
+      Mailman.logger.error "Exception occurred while receiving message:\n#{message}"
+      Mailman.logger.error [e, *e.backtrace].join("\n")
+    end
+  end  
+end

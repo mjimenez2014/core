@@ -1,0 +1,21 @@
+<h3>Editar Datos</h3>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true %>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+    <% end %>
+
+    <%= f.input :password, autocomplete: "off", hint: " Deje en blanco si no quiere cambiar esto", required: false %>
+    <%= f.input :password_confirmation, required: false %>
+    <%= f.input :current_password, hint: " Necesita ingresar su actual password para confirmar los cambios", required: true %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Modificar" %>
+  </div>
+<% end %>

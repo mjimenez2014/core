@@ -1,0 +1,23 @@
+%h1 Listing empresas
+
+%table
+  %thead
+    %tr
+      %th Rznsocial
+      %th Rut
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @empresas.each do |empresa|
+      %tr
+        %td= empresa.rznsocial
+        %td= empresa.rut
+        %td= link_to 'Show', empresa
+        %td= link_to 'Edit', edit_empresa_path(empresa)
+        %td= link_to 'Destroy', empresa, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Empresa', new_empresa_path

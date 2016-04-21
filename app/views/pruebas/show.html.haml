@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Rut:
+  = @prueba.rut
+%p
+  %b Nombre:
+  = @prueba.nombre
+
+= link_to 'Edit', edit_prueba_path(@prueba)
+\|
+= link_to 'Back', pruebas_path

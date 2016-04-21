@@ -1,0 +1,56 @@
+%h3 Documentos Manuales
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Tipodoc
+      %th Folio
+      %th Fchemis
+      %th Rutemisor
+      %th Rutrecep
+      %th Rznsocrecep
+      %th{:style => 'text-align: right;'} Mntneto
+      %th{:style => 'text-align: right;'} Mntexe
+      %th{:style => 'text-align: right;'} Mntiva
+      %th{:style => 'text-align: right;'} Otrosimpto
+      %th{:style => 'text-align: right;'} Mnttotal
+      %th Estado
+      %th
+      
+  %tbody
+    - @docmanuals.each do |docmanual|
+      %tr
+        %td= docmanual.nombre_doc
+        %td= docmanual.folio
+        %td= docmanual.fchemis
+        %td= docmanual.rutemisor
+        %td= docmanual.rutrecep
+        %td= docmanual.rznsocrecep
+        %td{:style => 'text-align: right;'}= number_to_currency(docmanual.mntneto, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+        %td{:style => 'text-align: right;'}= number_to_currency(docmanual.mntexe, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+        %td{:style => 'text-align: right;'}= number_to_currency(docmanual.mntiva, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+        %td{:style => 'text-align: right;'}= number_to_currency(docmanual.otrosimpto, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+        %td{:style => 'text-align: right;'}= number_to_currency(docmanual.mnttotal, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+        %td= docmanual.estado
+        %td= link_to 'Eliminar', docmanual, :method => :delete, :data => { :confirm => 'Seguro que desea eliminar?' }, class: "btn btn-primary btn-xs" 
+  %tr
+    %th
+    %th
+    %th
+    %th
+    %th
+    %th{:style => 'text-align: right;'}= 'TOTALES'
+    / %td{:style => 'text-align: right;'}= @totFmanual.count
+    %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.mntneto.to_i, precision: 0, delimiter: "." )+"&nbsp;".html_safe 
+    %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.mntexe.to_i, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+    %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.iva.to_i, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+    %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.otrosimp.to_i, precision: 0, delimiter: "." )+"&nbsp;".html_safe
+    %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.mnttotal.to_i, precision: 0, delimiter: "." )+"&nbsp;".html_safe 
+%br
+
+/  = link_to 'New Docmanual', new_docmanual_path
+%h2 Importar Documentos
+= form_tag import_docmanuals_path, multipart: true do 
+  = file_field_tag :file 
+  = submit_tag "Importar" 
+

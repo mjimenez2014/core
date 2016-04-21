@@ -1,0 +1,33 @@
+%h1 Listing iats
+
+%table
+  %tr
+    %th Nombre
+    %th Sucursal
+    %th Ultimo ping
+    %th Auth token
+    %th Ping inicio
+    %th Espacio disco
+    %th Memoria
+    %th User
+    %th
+    %th
+    %th
+
+  - @iats.each do |iat|
+    %tr
+      %td= iat.nombre
+      %td= iat.sucursal
+      %td= iat.ultimo_ping
+      %td= iat.auth_token
+      %td= iat.ping_inicio
+      %td= iat.espacio_disco
+      %td= iat.memoria
+      %td= iat.user
+      %td= link_to 'Show', iat
+      %td= link_to 'Edit', edit_iat_path(iat)
+      %td= link_to 'Destroy', iat, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Iat', new_iat_path

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Tipoimp:
+  = @otrosimpmanual.TipoImp
+%p
+  %b Tasaimp:
+  = @otrosimpmanual.TasaImp
+%p
+  %b Montoimp:
+  = @otrosimpmanual.MontoImp
+%p
+  %b Docmanual:
+  = @otrosimpmanual.docmanual
+
+= link_to 'Edit', edit_otrosimpmanual_path(@otrosimpmanual)
+\|
+= link_to 'Back', otrosimpmanuals_path

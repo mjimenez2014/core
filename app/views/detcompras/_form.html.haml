@@ -1,0 +1,31 @@
+= simple_form_for(@detcompra) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :NroLinDet
+    = f.input :TpoCodigo
+    = f.input :VlrCodigo
+    = f.input :TpoDocLiq
+    = f.input :IndExe
+    = f.input :IndAgente
+    = f.input :MntBaseFaena
+    = f.input :MntMargComer
+    = f.input :PrcConsFinal
+    = f.input :NmbItem
+    = f.input :DscItem
+    = f.input :QtyRef
+    = f.input :UnmdRef
+    = f.input :PrcRef
+    = f.input :QtyItem
+    = f.input :FchElabor
+    = f.input :FchVencim
+    = f.input :UnmdItem
+    = f.input :PrcItem
+    = f.input :DescuentoPct
+    = f.input :DescuentoMonto
+    = f.input :CodImpAdic
+    = f.input :MontoItem
+    = f.association :doccompra
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Tipo:
+  = @tipodte.tipo
+%p
+  %b Nombre:
+  = @tipodte.nombre
+
+= link_to 'Edit', edit_tipodte_path(@tipodte)
+\|
+= link_to 'Back', tipodtes_path

@@ -1,0 +1,23 @@
+= simple_form_for(@compmanual) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :tipodoc
+    = f.input :folio
+    = f.input :fchemis
+    = f.input :rutemisor
+    = f.input :rutrecep
+    = f.input :rznsoemisor
+    = f.input :mntneto
+    = f.input :mntexe
+    = f.input :mntiva
+    = f.input :otrosimpto
+    = f.input :mnttotal
+    = f.input :impto18
+    = f.input :impto10
+    = f.input :impto25
+    = f.input :impto30
+    = f.input :estado
+
+  .form-actions
+    = f.button :submit

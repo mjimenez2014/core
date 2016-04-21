@@ -1,0 +1,82 @@
+<Recibo version="1.0">
+			<DocumentoRecibo ID="T33">
+				<TipoDoc>33</TipoDoc>
+				<Folio>52687</Folio>
+				<FchEmis>2014-11-26</FchEmis>
+				<RUTEmisor>88888888-8</RUTEmisor>
+				<RUTRecep>77888630-8</RUTRecep>
+				<MntTotal>22682</MntTotal>
+				<Recinto>Bodega Central</Recinto>
+				<RutFirma>12891016-6</RutFirma>
+				<Declaracion>El acuse de recibo que se declara en este acto, de acuerdo a lo dispuesto en la letra b) del Art. 4, y la letra c) del Art. 5 de la Ley 19.983, acredita que la entrega de mercaderias o servicio(s) prestado(s) ha(n) sido recibido(s).</Declaracion>
+				<TmstFirmaRecibo>2014-11-27T11:19:00</TmstFirmaRecibo>
+			</DocumentoRecibo>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>FXHbd1snXvr8xF9GprI3Ji+CEXw=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>f0+Lo6JBLt0cPB92P2GNFAG3LYKoHr183J90OAgFo0CaJvXbDFcYj30vjRppJNiA
+Xe4R1cf7Em8FM4lunBjY+feBx6UP6um8xF2htm383MslO7SkFMnMmBqRGeUc2xlf
+LX73yROnsfykO4pDCouRQwGg/D4h7b8WNQk+UfWDZ1I=</SignatureValue>
+<KeyInfo>
+<KeyValue>
+<RSAKeyValue>
+<Modulus>
+o9cYdRTMB/zpZJCop13dtvR+DYkMQLQ56rr2kFpPvjmDKSXZMLr4QCew9u8uwkkW
+zw1tdNv4KoN2KzqIoI+8bBn79e3U0YdCcEJmobnljBJT3XCZOsyRrBeWHkMbcux+
+amTxAhcr45Ezse1t3bPq+xOy1JRdAKRRsQSn+9C8Bwk=
+</Modulus>
+<Exponent>
+AQAB
+</Exponent>
+</RSAKeyValue>
+</KeyValue>
+<X509Data>
+
+<X509Certificate>MIIGdDCCBVygAwIBAgIKNeG73AAAAAGnEjANBgkqhkiG9w0BAQUFADCB0jELMAkG
+A1UEBhMCQ0wxHTAbBgNVBAgTFFJlZ2lvbiBNZXRyb3BvbGl0YW5hMREwDwYDVQQH
+EwhTYW50aWFnbzEUMBIGA1UEChMLRS1DRVJUQ0hJTEUxIDAeBgNVBAsTF0F1dG9y
+aWRhZCBDZXJ0aWZpY2Fkb3JhMTAwLgYDVQQDEydFLUNFUlRDSElMRSBDQSBGSVJN
+QSBFTEVDVFJPTklDQSBTSU1QTEUxJzAlBgkqhkiG9w0BCQEWGHNjbGllbnRlc0Bl
+LWNlcnRjaGlsZS5jbDAeFw0xNDA5MTAyMDE3NTRaFw0xNzA5MDkyMDE3NTRaMIH2
+MQswCQYDVQQGEwJDTDEjMCEGA1UECBMaTUVUUk9QT0xJVEFOQSBERSBTQU5USUFH
+TyAxETAPBgNVBAcTCFNhbnRpYWdvMR4wHAYDVQQKExVDT01FUkNJQUwgTFVCQkEg
+TFREQS4xSDBGBgNVBAsTP0RJU1RSSUJVSURPUkEgREUgQ09ORklURVMsQUJBUlJP
+VEVTLENJR0FSUklMTE9TLExJQ09SRVMgWSBPVFJPUzEeMBwGA1UEAxMVTFVJUyBC
+QVJBSE9OQSBNRU5ET1pBMSUwIwYJKoZIhvcNAQkBFhZMVUlTLkJBUkFIT05BQExV
+QkJBLkNMMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCj1xh1FMwH/OlkkKin
+Xd229H4NiQxAtDnquvaQWk++OYMpJdkwuvhAJ7D27y7CSRbPDW102/gqg3YrOoig
+j7xsGfv17dTRh0JwQmahueWMElPdcJk6zJGsF5YeQxty7H5qZPECFyvjkTOx7W3d
+s+r7E7LUlF0ApFGxBKf70LwHCQIDAQABo4ICqDCCAqQwPQYJKwYBBAGCNxUHBDAw
+LgYmKwYBBAGCNxUIgtyDL4WTjGaF1Z0XguLcJ4Hv7DxhgZrnFYav4BUCAWQCAQQw
+HQYDVR0OBBYEFOXBwVeLujme/6Q0cCuc23HrP3OhMAsGA1UdDwQEAwIE8DAfBgNV
+HSMEGDAWgBR44T6f0hKzejyNzTAOU7NDKQezVTA+BgNVHR8ENzA1MDOgMaAvhi1o
+dHRwOi8vY3JsLmUtY2VydGNoaWxlLmNsL2VjZXJ0Y2hpbGVjYUZFUy5jcmwwOwYI
+KwYBBQUHAQEELzAtMCsGCCsGAQUFBzABhh9odHRwOi8vb2NzcC5pbnRlcmNhcGl0
+LmNvbS9vY3NwMCMGA1UdEQQcMBqgGAYIKwYBBAHBAQGgDBYKMDU2ODI1MDktNjAj
+BgNVHRIEHDAaoBgGCCsGAQQBwQECoAwWCjk2OTI4MTgwLTUwggFNBgNVHSAEggFE
+MIIBQDCCATwGCCsGAQQBw1IFMIIBLjAtBggrBgEFBQcCARYhaHR0cDovL3d3dy5l
+LWNlcnRjaGlsZS5jbC9DUFMuaHRtMIH8BggrBgEFBQcCAjCB7x6B7ABDAGUAcgB0
+AGkAZgBpAGMAYQBkAG8AIABGAGkAcgBtAGEAIABTAGkAbQBwAGwAZQAuACAASABh
+ACAAcwBpAGQAbwAgAHYAYQBsAGkAZABhAGQAbwAgAGUAbgAgAGYAbwByAG0AYQAg
+AHAAcgBlAHMAZQBuAGMAaQBhAGwALAAgAHEAdQBlAGQAYQBuAGQAbwAgAGgAYQBi
+AGkAbABpAHQAYQBkAG8AIABlAGwAIABDAGUAcgB0AGkAZgBpAGMAYQBkAG8AIABw
+AGEAcgBhACAAdQBzAG8AIAB0AHIAaQBiAHUAdABhAHIAaQBvMA0GCSqGSIb3DQEB
+BQUAA4IBAQBd1cZ2H7W9EdPJuXxEwmXpHt66OdGqnFd98YYmzZO8BVvjOolwkQaF
+rvuHyqqDaqQzriIl/q54FbfmNNjs7bnUa2g3oTZKAQ4qymz7tUOI8vR0/Pb8DCJi
+QKDuQoxHkw/0sDZqrvlUfg7tf61fY9N1f+mC2HLg5pVeuA2Ro4qhnCmxqeq9SjTS
+j/v0wzDin0rfWNCYl18siI00HcaHms2dLDnSSBegc770DXtXZdpyxhf1y8xeWpGU
+ZFzOWYFvaffnrEnY2y9pLMQ9/lggxoiOEGdDSeHwzVqy5YF0WIdH+WT5r1403lZ/
+ZjNsUbDFvO0IGu+UFHWFggXHuxXL2oyc</X509Certificate>
+</X509Data>
+</KeyInfo>
+</Signature>
+</Recibo>

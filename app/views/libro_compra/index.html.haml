@@ -1,0 +1,176 @@
+%h2 Resumen Libro de Compras
+%br
+%h3 Documentos Electronicos
+%p.text-danger Facturas no incluidas en libros anteriores.
+
+= form_tag "/buscarLibroCompra" do
+  = field_set_tag do
+    = label_tag :empresa, 'Empresa:'
+    = select_tag "empresa", options_from_collection_for_select(@empresas, "rut", "rznsocial")
+
+    = label_tag :Mes, 'Mes:'
+    = month_field_tag "Mes", value = DateTime.now , options = {} 
+  
+    = submit_tag 'Buscar'
+%br
+%br
+%br
+%h3= @empresa 
+%h4= @fecha   
+- unless @documento.nil?
+  %table.table.table-striped
+    %tr
+      %th{:style => 'text-align: right;'} Tipodte
+      %th{:style => 'text-align: right;'} Dtos
+      %th{:style => 'text-align: right;'} Mntneto
+      %th{:style => 'text-align: right;'} MntExe
+      %th{:style => 'text-align: right;'} MntIva
+      %th{:style => 'text-align: right;'} MntTotal
+      %th 
+
+    - @documentos.each do |documento|
+      %tr
+        %td{:style => 'text-align: right;'}= documento.TipoDTE
+        %td{:style => 'text-align: right;'}= documento.count
+        - if(documento.TipoDTE==61 || documento.TipoDTE==60) 
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.mntneto , precision: 0, delimiter: "." )+')' 
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.mntexe , precision: 0, delimiter: "." )+')'
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.iva , precision: 0, delimiter: "." )+')'
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.otrosimp , precision: 0, delimiter: "." )+')'
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.mnttotal , precision: 0, delimiter: "." )+')'
+        -else
+          %td{:style => 'text-align: right;'}= number_to_currency(documento.mntneto , precision: 0, delimiter: "." )+"&nbsp;".html_safe 
+          %td{:style => 'text-align: right;'}= number_to_currency(documento.mntexe , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+          %td{:style => 'text-align: right;'}= number_to_currency(documento.iva , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+          %td{:style => 'text-align: right;'}= number_to_currency(documento.mnttotal , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+    %tr
+      %th{:style => 'text-align: right;'}= 'TOTALES'
+      %td{:style => 'text-align: right;'}= @totFact.count + @totCred.count 
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFact.mntneto.to_i - @totCred.mntneto.to_i , precision: 0, delimiter: "." )+"&nbsp;".html_safe 
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFact.mntexe.to_i - @totCred.mntexe.to_i , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFact.iva.to_i - @totCred.iva.to_i , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFact.otrosimp.to_i - @totCred.otrosimp.to_i , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFact.mnttotal.to_i - @totCred.mnttotal.to_i, precision: 0, delimiter: "." )+"&nbsp;".html_safe  
+
+  %br
+  %br
+  %br
+  %div.col-md-6
+    %h4 Resumen Otros Impuestos 
+    %table.table.table-striped{:style=>"width: 50%"}
+      %tr
+        %th TipoDcto
+        %th TipoImp
+        %th TasaImp
+        %th MontoImp
+      - @otrosImps.each do |otroImp|
+        %tr
+          %td= otroImp.TipoDTE
+          %td= otroImp.tipoimp
+          %td= number_to_percentage(otroImp.tasaimp, precision: 1, delimiter: "," )
+          %td= number_to_currency(otroImp.montoimp, precision: 0, delimiter: "." )
+
+  %div.col-md-6
+    %h4 Resumen Otros Impuestos Credito 
+    %table.table.table-striped{:style=>"width: 50%"}
+      %tr
+        %th TipoDcto
+        %th TipoImp
+        %th TasaImp
+        %th MontoImp
+      - @otrosImpsCred.each do |otroImp|
+        %tr
+          - if(otroImp.montoimp>0)
+            %td= otroImp.TipoDTE
+            %td= otroImp.tipoimp
+            %td= number_to_percentage(otroImp.tasaimp, precision: 1, delimiter: "," )
+            %td= '('+number_to_currency(otroImp.montoimp, precision: 0, delimiter: "." )+')'
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br
+- unless @docmanuals.nil?  
+  %h3 Documentos Manuales
+  %br
+
+  %table.table.table-striped
+    %tr
+      %th{:style => 'text-align: right;'} Tipodte
+      %th{:style => 'text-align: right;'} Dtos
+      %th{:style => 'text-align: right;'} Mntneto
+      %th{:style => 'text-align: right;'} MntExe
+      %th{:style => 'text-align: right;'} MntIva
+      %th{:style => 'text-align: right;'} Impuestos
+      %th{:style => 'text-align: right;'} MntTotal
+      %th 
+    
+    - @docmanuals.each do |documento|
+      %tr
+        %td{:style => 'text-align: right;'}= documento.nomtipo
+        %td{:style => 'text-align: right;'}= documento.count
+        - if(documento.tipodoc==61 || documento.tipodoc==60 ) 
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.mntneto , precision: 0, delimiter: "." )+')' 
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.mntexe , precision: 0, delimiter: "." )+')'
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.iva , precision: 0, delimiter: "." )+')'
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.otrosimp , precision: 0, delimiter: "." )+')'
+          %td{:style => 'text-align: right;'}= '('+number_to_currency(documento.mnttotal , precision: 0, delimiter: "." )+')'
+        -else
+          %td{:style => 'text-align: right;'}= number_to_currency(documento.mntneto , precision: 0, delimiter: "." )+"&nbsp;".html_safe 
+          %td{:style => 'text-align: right;'}= number_to_currency(documento.mntexe , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+          %td{:style => 'text-align: right;'}= number_to_currency(documento.iva , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+          %td{:style => 'text-align: right;'}= number_to_currency(documento.otrosimp , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+          %td{:style => 'text-align: right;'}= number_to_currency(documento.mnttotal , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+    %tr
+      %th{:style => 'text-align: right;'}= 'TOTALES'
+      %td{:style => 'text-align: right;'}= @totFmanual.count + @totCredManual.count 
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.mntneto.to_i - @totCredManual.mntneto.to_i , precision: 0, delimiter: "." )+"&nbsp;".html_safe 
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.mntexe.to_i - @totCredManual.mntexe.to_i , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.iva.to_i - @totCredManual.iva.to_i , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.otrosimp.to_i - @totCredManual.otrosimp.to_i , precision: 0, delimiter: "." )+"&nbsp;".html_safe
+      %td{:style => 'text-align: right;'}= number_to_currency(@totFmanual.mnttotal.to_i - @totCredManual.mnttotal.to_i, precision: 0, delimiter: "." )+"&nbsp;".html_safe 
+  %br
+  %div.col-md-6
+    %h4 Resumen Otros Impuestos 
+    %table.table.table-striped{:style=>"width: 50%"}
+      %tr
+        %th TipoDcto
+        %th TipoImp
+        %th TasaImp
+        %th MontoImp
+      - @otrosImpsMan.each do |otroImp|
+        %tr
+          %td= otroImp.nomtipo
+          %td= otroImp.tipoimp
+          %td= number_to_percentage(otroImp.tasaimp, precision: 1, delimiter: "," )
+          %td= number_to_currency(otroImp.montoimp, precision: 0, delimiter: "." )
+  %div.col-md-6
+    %h4 Resumen Otros Impuestos Credito 
+    %table.table.table-striped{:style=>"width: 50%"}
+      %tr
+        %th TipoDcto
+        %th TipoImp
+        %th TasaImp
+        %th MontoImp   
+      - @otrosImpsCredMan.each do |otroImp|
+        %tr
+          - if(otroImp.montoimp>0)
+            %td= otroImp.nomtipo
+            %td= otroImp.tipoimp
+            %td= number_to_percentage(otroImp.tasaimp, precision: 1, delimiter: "," )
+            %td= '('+number_to_currency(otroImp.montoimp, precision: 0, delimiter: "." )+')'
+
+
+
+
+
+=link_to "Generar Libro de Compras", :controller => "libro_compra", :action => "generalibro" , :rut => @rut, :mes => @fecha 

@@ -1,0 +1,15 @@
+%h2 Compras
+%br
+%br
+= form_tag "/report/findCompra.xls" do
+  = field_set_tag do
+    = label_tag :empresa, 'Empresa:'
+    = select_tag "empresa", options_from_collection_for_select(@empresas, "rut", "rznsocial")
+
+    = label_tag :Mes, 'Mes:'
+    = month_field_tag "Mes", value = DateTime.now , options = {} 
+  
+    = submit_tag 'Exportar a Excel'
+%br
+%br
+%br

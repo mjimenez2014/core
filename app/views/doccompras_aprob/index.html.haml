@@ -1,0 +1,29 @@
+%h3 Documentos Proveedor Aprobados
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Tipodte
+      %th Folio
+      %th Fchemis
+      %th Rutemisor
+      %th Rznsoc
+      %th Rutrecep
+      %th Rznsocrecep
+      %th Mnttotal
+      %th
+      %th  
+  %tbody
+    - @doccompras.each do |doccompra|
+      %tr
+        %td= doccompra.TipoDTE
+        %td= doccompra.Folio
+        %td= doccompra.FchEmis
+        %td= doccompra.RUTEmisor
+        %td= doccompra.RznSoc.force_encoding('utf-8')
+        %td= doccompra.RUTRecep
+        %td= doccompra.RznSocRecep.force_encoding('utf-8')
+        %td= number_to_currency( doccompra.MntTotal, precision: 0, delimiter: "." )
+        %td= link_to "Detalle", "/detcompras/#{doccompra.id}", class: "btn btn-primary btn-xs"
+        %td= link_to "Rechazar", "/doccompras_aprob/rechazar/#{doccompra.id}", class: "btn btn-danger btn-xs"      
+

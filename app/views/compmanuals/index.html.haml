@@ -1,0 +1,41 @@
+%h3 Documentos de Compra
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th Tipodoc
+      %th Folio
+      %th Fchemis
+      %th Rutemisor
+      %th Rutrecep
+      %th Rznsocemisor
+      %th Mntneto
+      %th Mntexe
+      %th Mntiva
+      %th Otrosimpto
+      %th Mnttotal
+      %th Estado
+      %th
+      
+  %tbody
+    - @compmanuals.each do |compmanual|
+      %tr
+        %td= compmanual.tipodoc
+        %td= compmanual.folio
+        %td= compmanual.fchemis
+        %td= compmanual.rutemisor
+        %td= compmanual.rutrecep
+        %td= compmanual.rznsocemisor.force_encoding('utf-8')
+        %td= compmanual.mntneto
+        %td= compmanual.mntexe
+        %td= compmanual.mntiva
+        %td= compmanual.otrosimpto
+        %td= compmanual.mnttotal
+        %td= compmanual.estado
+        %td= link_to 'Eliminar', compmanual, :method => :delete, :data => { :confirm => 'Seguro que desea Eliminar?' }
+
+%br
+%h2 Importar Documentos
+= form_tag import_compmanuals_path, multipart: true do 
+  = file_field_tag :file 
+  = submit_tag "Importar" 

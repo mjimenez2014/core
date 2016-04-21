@@ -1,0 +1,21 @@
+%h1 Listing iat_logs
+
+%table
+  %tr
+    %th Description
+    %th Iat
+    %th
+    %th
+    %th
+
+  - @iat_logs.each do |iat_log|
+    %tr
+      %td= iat_log.description
+      %td= iat_log.iat
+      %td= link_to 'Show', iat_log
+      %td= link_to 'Edit', edit_iat_log_path(iat_log)
+      %td= link_to 'Destroy', iat_log, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Iat log', new_iat_log_path

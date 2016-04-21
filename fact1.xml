@@ -1,0 +1,94 @@
+<DTE version="1.0"> 
+<Documento ID="F1T33"> 
+<Encabezado> 
+<IdDoc> 
+<TipoDTE>33</TipoDTE> 
+<Folio>1</Folio> 
+<FchEmis>2014-10-14</FchEmis> 
+</IdDoc> 
+<Emisor> 
+<RUTEmisor>77398570-7</RUTEmisor> 
+<RznSoc>COMERCIAL LUBBA LIMITADA</RznSoc> 
+<GiroEmis>COMERCIALIZADORA DE CONFITES, SUPERMERCADO, DEPOSITO DE LICORES, CIGARRILLOS</GiroEmis> 
+<Acteco>521112</Acteco> 
+<CdgSIISucur>41271651</CdgSIISucur> 
+<DirOrigen>ABEL GONZALEZ 44</DirOrigen> 
+<CmnaOrigen>LA CISTERNA</CmnaOrigen> 
+<CiudadOrigen></CiudadOrigen> 
+</Emisor> 
+<Receptor> 
+<RUTRecep>04940273-2</RUTRecep> 
+<RznSocRecep>JUAN GUTIERREZ GUTIERREZ</RznSocRecep> 
+<GiroRecep>CONFITES</GiroRecep> 
+<DirRecep>SANTA ROSA 8735</DirRecep> 
+<CmnaRecep>SAN RAMON</CmnaRecep> 
+<CiudadRecep>SANTIAGO</CiudadRecep> 
+</Receptor> 
+<Totales> 
+<MntNeto>303677</MntNeto> 
+<TasaIVA>19</TasaIVA> 
+<IVA>57699</IVA> 
+<MntTotal>361376</MntTotal> 
+</Totales> 
+</Encabezado> 
+<Detalle> 
+<NroLinDet>1</NroLinDet> 
+<CdgItem> 
+  <TpoCodigo>PLU</TpoCodigo> 
+  <VlrCodigo>1</VlrCodigo> 
+</CdgItem> 
+<NmbItem>Caj?n AFECTO</NmbItem> 
+<DscItem></DscItem> 
+<QtyItem>131</QtyItem> 
+<PrcItem>1367</PrcItem> 
+<MontoItem>179077</MontoItem> 
+</Detalle> 
+<Detalle> 
+<NroLinDet>2</NroLinDet> 
+<CdgItem> 
+  <TpoCodigo>PLU</TpoCodigo> 
+  <VlrCodigo>2</VlrCodigo> 
+</CdgItem> 
+<NmbItem>Relleno AFECTO</NmbItem> 
+<DscItem></DscItem> 
+<QtyItem>56</QtyItem> 
+<PrcItem>2225</PrcItem> 
+<MontoItem>124600</MontoItem> 
+</Detalle> 
+<Referencia> 
+<NroLinRef>1</NroLinRef> 
+<TpoDocRef>SET</TpoDocRef> 
+<IndGlobal>1</IndGlobal>
+<FolioRef>1</FolioRef> 
+<RUTOtr>04940273-2</RUTOtr> 
+<FchRef>2014-10-17</FchRef> 
+<CodRef>1</CodRef> 
+<RazonRef>CASO  311171-1</RazonRef> 
+</Referencia> 
+<TED version="1.0"> 
+<DD> <RE>77398570-7</RE> 
+<TD>33</TD> 
+<F>1</F> 
+<FE>2014-10-14</FE> 
+<RR>04940273-2</RR> 
+<RSR>JUAN GUTIERREZ GUTIERREZ</RSR> 
+<MNT>361376</MNT> 
+<IT1>Caj?n AFECTO</IT1> 
+<CAF version="1.0">
+<DA>
+<RE>77398570-7</RE>
+<RS>COMERCIAL LUBBA LIMITADA</RS>
+<TD>33</TD>
+<RNG><D>1</D><H>100</H></RNG>
+<FA>2014-10-08</FA>
+<RSAPK><M>yA0FipeLjCz8YNPhL6740jK4zLtEEbklyYHz0mlxNgMRbP/YevgPTxMcCyW1PFMrrRAV0nJziwuSxVKIo ysXw==</M><E>Aw==</E></RSAPK>
+<IDK>100</IDK>
+</DA>
+<FRMA algoritmo="SHA1withRSA">lZGpuChURVfxlMTVeYzcj94CoqREI ncSLnqWCZ5PL9 KqEuWVq1zsEYZ213IxYGU KRxKOIWyEQC05L2zUZuw==</FRMA>
+</CAF><TSTED>2014-10-18T00:00:00</TSTED> 
+</DD> <FRMT algoritmo="SHA1withRSA">ad/R9O3o32xcPTXWT139WCVwAqm EJ8d6jwIunQlIOTP7wGwbTgsKrG 4/bWl5GQSooSxz1PoVzPjpKsKGMBAA==
+</FRMT> 
+</TED>
+<TmstFirma>2014-10-18T00:00:00</TmstFirma>
+</Documento>
+</DTE> 

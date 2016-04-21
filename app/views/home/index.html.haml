@@ -1,0 +1,58 @@
+= javascript_include_tag "//www.google.com/jsapi", "chartkick" 
+%h2{:align=>"center"}  Estadísticas Mes en Curso
+
+%div.col-md-6
+  %h4.text-danger{:align=>"center"} Cantidad de Documentos por Sucursal
+  = pie_chart @d , height: "200px"
+  %br
+  %table.table.table-striped{:style=>"width: 50%", :align=>"center"}
+    %tr
+      %th Sucursal
+      %th Documentos
+    - @d.each  do |k,v|
+      %tr
+        %td= k    
+        %td= v
+  %br
+  %br
+  %br      
+  %h4.text-danger{:align=>"center"} Monto Total por Empresa
+  = bar_chart @p,  height: "200px"
+  %br
+  %table.table.table-striped{:style=>"width: 50%", :align=>"center" }
+    %tr
+      %th Empresa
+      %th Monto
+    - @p.each  do |k,v|
+      %tr
+        %td= k    
+        %td= number_to_currency(v, precision: 0, delimiter: "." ) 
+
+
+
+%div.col-md-6
+  %h4.text-danger{:align=>"center"}  Monto Total por Sucursal
+  = pie_chart @f, height: "200px"
+  %br
+  %table.table.table-striped{:style=>"width: 50%", :align=>"center"}
+    %tr
+      %th Sucursal
+      %th Monto
+    - @f.each  do |k,v|
+      %tr
+        %td= k    
+        %td= number_to_currency(v, precision: 0, delimiter: "." ) 
+  %br
+  %br
+  %br
+  %h4.text-danger{:align=>"center"}  Monto Total por Sucursal
+  = bar_chart @f, height: "200px"
+  %br
+  %table.table.table-striped{:style=>"width: 50%", :align=>"center"}
+    %tr
+      %th Sucursal
+      %th Monto
+    - @f.each  do |k,v|
+      %tr
+        %td= k    
+        %td= number_to_currency(v, precision: 0, delimiter: "." ) 

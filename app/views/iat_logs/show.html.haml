@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Description:
+  = @iat_log.description
+%p
+  %b Iat:
+  = @iat_log.iat
+
+= link_to 'Edit', edit_iat_log_path(@iat_log)
+\|
+= link_to 'Back', iat_logs_path
